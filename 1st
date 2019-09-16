@@ -1,0 +1,11 @@
+package com.oleh.begin;
+
+import java.util.Date;
+import java.util.stream.IntStream;
+
+public class FirstApp {
+    public static void main(String[] args) {
+        System.out.println("Hello it's:");
+        System.out. println (new Date()) ;
+    }
+}
