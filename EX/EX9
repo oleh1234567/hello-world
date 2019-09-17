@@ -1,0 +1,30 @@
+package com.oleh.begin;
+
+public class Autoboxing {
+    public static void main (String[] args) {
+        Boolean a = false;
+        boolean a1 = a;
+        System.out.println("boolean = " + a1);
+        Character b = 'a';
+        char b1 = b;
+        System.out.println("char = " + b1);
+        Byte c = 100;
+        byte c1 = c;
+        System.out.println("byte = " + c1);
+        Short d = 200;
+        short d1 = d;
+        System.out.println("short = " + d1);
+        Integer e = 300;
+        int e1 = e;
+        System.out.println("int = " + e1);
+        Long f = 400L;
+        long f1 = f;
+        System.out.println("long = " + f1);
+        Float g = 9.0f;
+        float g1 = g;
+        System.out.println("float = " + g1);
+        Double h = 10.1;
+        double h1 = h;
+        System.out.println("double = "+  h1);
+    }
+}
