@@ -1,0 +1,16 @@
+class AliasingMethod{
+    float m;
+}
+
+public class EX2{
+    static void f(AliasingMethod y){
+        y.m = 4.2f;
+    }
+    public static void main (String[] args){
+        AliasingMethod x = new AliasingMethod();
+        x.m = 0.042f;
+        System.out.println("1: x.m  = " + x.m);
+        f(x);
+        System.out.println("2: x.m = " + x.m);
+    }
+}
