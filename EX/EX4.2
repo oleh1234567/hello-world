@@ -1,0 +1,19 @@
+class Aliasing{
+    float i;
+}
+
+public class EX2 {
+    public static void main(String[] args){
+        Aliasing i1 = new Aliasing();
+        Aliasing i2 = new Aliasing();
+        Aliasing i3 = new Aliasing();
+        i1.i = 0.1f;
+        i2.i = 0.25f;
+        i3.i = 0;
+        System.out.println("1: i1 = " + i1.i + ", i2 = " + i2.i + ", i3 = " + i3.i);
+        i1 = i2 = i3;
+        System.out.println("2: i1 = " + i1.i + ", i2 = " + i2.i + ", i3 = " + i3.i);
+        i1.i = 0.42f;
+        System.out.println("3: i1 = " + i1.i + ", i2 = " + i2.i + ", i3 = " + i3.i);
+    }
+}
