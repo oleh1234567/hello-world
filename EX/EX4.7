@@ -1,0 +1,17 @@
+import java.util.*;
+
+//Write a program that simulates coin-flipping.
+
+class CoinFlip{
+    boolean coin;
+}
+public class H4EX6 {
+    public static void main (String[] args)
+    {
+        CoinFlip c = new CoinFlip();
+        Random rand = new Random();
+        c.coin = rand.nextBoolean();
+        if (c.coin == false) System.out.println("reverse");
+            else System.out.println("obverse");
+    }
+}
