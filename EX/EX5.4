@@ -1,0 +1,21 @@
+//Write a program that uses two nested for loops and the
+//modulus operator (%) to detect and print prime numbers (integral numbers
+//that are not evenly divisible by any other numbers except for themselves and
+//1).
+
+//Число "a" не є простим, якщо a % N == 0; N <=a;
+public class Exercise {
+    public static void main (String[] args){
+        int c = 1;
+        for(int i = 1; i < 100; i++) {
+            for (int j = 2; j < i; j++){
+                if(i % j == 0)
+                    break;
+                else c++;
+            }
+            if(c == i)
+                System.out.println(i);
+            c = 2;
+        }
+    }
+}
