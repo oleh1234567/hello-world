@@ -1,0 +1,29 @@
+/*EX5.9
+(4) A Fibonacci sequence is the sequence of numbers 1,1, 2, 3,
+5, 8,13, 21, 34, and so on, where each number (from the third on) is the sum
+of the previous two. Create a method that takes an integer as an argument
+and displays that many Fibonacci numbers starting from the beginning, e.g.,*/
+
+
+public class Exercise{
+    public static void Fibonacci(int a) {
+        int previous = 1;
+        int next = 1;
+        int sum = 1;
+        System.out.println(sum);
+        for(int i = 2; i <= a; i++) {
+            System.out.println(sum);
+            sum = previous + next;
+            previous = next;
+            next = sum;
+        }
+    }
+    public static void main(String[] args) {
+        int n = Integer.parseInt(args[0]);
+        if (n <= 0){
+            System.out.println("negative");
+            return;
+        }
+        Fibonacci(n);
+    }
+}
