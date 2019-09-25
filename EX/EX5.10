@@ -1,0 +1,108 @@
+/*E x e r c i s e IO: (5) A vampire number has an even number of digits and is
+formed by multiplying a pair of numbers containing half the number of digits
+of the result. The digits are taken from the original number in any order.
+Pairs of trailing zeroes are not allowed. Examples include:
+1260 = 21 * 60
+1827 = 21 * 87
+2187 = 27* 81
+Write a program that finds all the 4-digit vampire numbers. (Suggested by
+Dan Forhan.)*/
+
+
+public class Exercise{
+    public static void main(String[] args){
+        int i1 = 0;
+        int i2 = 0;
+        int i3 = 0;
+        int i4 = 0;
+        int firstPart = 0;
+        int secondPart = 0;
+        int dobutok = 0;
+        for (int i = 1000; i <= 9999; i++){
+            i1 = i / 1000;
+            i2 = i / 100 % 10;
+            i3 = i % 100 / 10;
+            i4 = i % 10; //i1i2*i3i4; i1i3*i2i4; i1i4*i2i3; i2i1*i...
+            //1260 10+2 * 60+0; 10+6 * 20+0; 20+1 * 60 + 0...
+
+           //i1:
+            firstPart = i1 * 10 + i2;
+            secondPart = i3 * 10 + i4;
+            if (firstPart * secondPart == i){
+                System.out.println("i = " + i + " firstPart = " + firstPart + " secondPart = " + secondPart);
+                continue;
+            }
+            firstPart = i1 * 10 + i3;
+            secondPart = i2 * 10 + i4;
+            if (firstPart * secondPart == i){
+                System.out.println("i = " + i + " firstPart = " + firstPart + " secondPart = " + secondPart);
+                continue;
+            }
+            firstPart = i1 * 10 + i4;
+            secondPart = i2 * 10 + i3;
+            if (firstPart * secondPart == i){
+                System.out.println("i = " + i + " firstPart = " + firstPart + " secondPart = " + secondPart);
+                continue;
+            }
+            //--------------------------------------------------------
+            firstPart = i1 * 10 + i2;
+            secondPart = i4 * 10 + i3;
+            if (firstPart * secondPart == i){
+                System.out.println("i = " + i + " firstPart = " + firstPart + " secondPart = " + secondPart);
+                continue;
+            }
+            firstPart = i1 * 10 + i3;
+            secondPart = i4 * 10 + i2;
+            if (firstPart * secondPart == i){
+                System.out.println("i = " + i + " firstPart = " + firstPart + " secondPart = " + secondPart);
+                continue;
+            }
+            firstPart = i1 * 10 + i4;
+            secondPart = i3 * 10 + i2;
+            if (firstPart * secondPart == i){
+                System.out.println("i = " + i + " firstPart = " + firstPart + " secondPart = " + secondPart);
+                continue;
+            }
+            //___________________________________________________________________________________________________
+            firstPart = i2 * 10 + i1;
+            secondPart = i3 * 10 + i4;
+            if (firstPart * secondPart == i){
+                System.out.println("i = " + i + " firstPart = " + firstPart + " secondPart = " + secondPart);
+                continue;
+            }
+            firstPart = i3 * 10 + i1;
+            secondPart = i2 * 10 + i4;
+            if (firstPart * secondPart == i){
+                System.out.println("i = " + i + " firstPart = " + firstPart + " secondPart = " + secondPart);
+                continue;
+
+            }
+            firstPart = i4 * 10 + i1;
+            secondPart = i3 * 10 + i2;
+            if (firstPart * secondPart == i){
+                System.out.println("i = " + i + " firstPart = " + firstPart + " secondPart = " + secondPart);
+                continue;
+            }
+            //---------------------------------------------------------------------------
+            firstPart = i2 * 10 + i1;
+            secondPart = i4 * 10 + i3;
+            if (firstPart * secondPart == i){
+                System.out.println("i = " + i + " firstPart = " + firstPart + " secondPart = " + secondPart);
+                continue;
+
+            }
+            firstPart = i3 * 10 + i1;
+            secondPart = i4 * 10 + i3;
+            if (firstPart * secondPart == i){
+                System.out.println("i = " + i + " firstPart = " + firstPart + " secondPart = " + secondPart);
+                continue;
+            }
+            firstPart = i4 * 10 + i1;
+            secondPart = i2 * 10 + i3;
+            if (firstPart * secondPart == i){
+                System.out.println("i = " + i + " firstPart = " + firstPart + " secondPart = " + secondPart);
+                continue;
+            }
+         }
+    }
+}
